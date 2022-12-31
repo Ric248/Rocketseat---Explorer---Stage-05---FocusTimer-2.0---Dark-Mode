@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --body-background: #FFFFFF;
+  --base-color: #323238;
+  --base-color-selected: #FFFFFF;
+  --button-background: #E1E1E6;
+  --button-background-selected: #02799D;
+  --text-color: #323238;
+  font-size: 62.5%;
+}
+
+.dark {
+  --body-background: #121214;
+  --base-color: #C4C4CC;
+  --text-color: #FFFFFF;
+  --button-background: #29292E;
+  --button-background-selected: #0A3442;
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  background-color: var(--body-background);
+  font-family: 'Roboto', sans-serif;
+  font-size: 12.6rem;
+
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--text-color);
+
+  display: grid;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  gap: 19.2rem;
+  justify-self: center;
+  align-self: center;
+  height: 33.6rem;
+}
+
+#left-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 32rem;
+  gap: 4.8rem;
+}
+
+#left-wrapper svg path {
+  fill: var(--base-color);
+}
+
+#right-wrapper {
+  width: 32rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+#right-wrapper button{
+  width: 13.8rem;
+  height: 15.2rem;
+  border-radius: 24px;
+}
+
+.normal{
+  background: var(--button-background);
+}
+
+.selected{
+  background: var(--button-background-selected);
+}
+
+svg path, svg circle, svg rect {
+  fill: var(--base-color);
+}
+
+.selected svg path, .selected svg circle, .selected svg rect {
+  fill: var(--base-color-selected);
+}
+
+.slider {
+  margin-top: 32px;
+}
+
+#timer {
+  display: flex;
+  height: 11.7rem;
+}
+
+#controls {
+  display: flex;
+  gap: 4rem;
+  height: 4.8rem;
+}
+
+#left-wrapper button:hover {
+  transform: scale(1.08);
+  filter: contrast(2);
+  transition-duration: 200ms;
+}
+
+#right-wrapper button:hover {
+  transform: scale(1.1);
+  transition-duration: 200ms;
+}
+
+.sun {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+}
+
+.moon {
+  position: absolute;
+  top: 64px;
+  right: 64px;
+}
